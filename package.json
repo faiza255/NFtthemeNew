@@ -6,12 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.6",
     "@vercel/node": "^2.5.13",
     "aos": "^2.3.4",
+    "firebase-admin": "^11.0.1",
+    "firebase-functions": "^3.23.0",
     "framer-motion": "^7.2.1",
     "next": "12.2.5",
     "react": "18.2.0",

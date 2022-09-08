@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import Aos from 'aos'
 import "aos/dist/aos.css"
-import profileUsers from './profileUsers.js'
+import ProfileUsers from './Cards_api/profileUsers.js'
 const ProfileCards = () => {
     useEffect(()=>{
         Aos.init({duration:500})
         },[])
   return (
     
-      <div className="container max-w-full profileCardsection">
+      <div className="container max-w-full profileCardsection -mt-28">
     <div className="myflex flex justify-center cardflex">
 
 
-    {profileUsers.map((e)=>{
+    {ProfileUsers.map((e)=>{
        return (
          <>
         <div className="mycolumncard mb-10">

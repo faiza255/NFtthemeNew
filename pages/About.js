@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
-
-import Users from './users'
-import Cards from './Liveactioncards'
+import Users from '../components/Cards_api/users'
+import Cards from '../components/CardsSection.js'
 import Aos from 'aos'
 import "aos/dist/aos.css"
-// import Modal from '../components/Modal'
+
 
 const About = () => {
   useEffect(()=>{
@@ -35,12 +34,9 @@ const About = () => {
 
     </div>
 <Cards />
-{/* <button >Open Modal</button> */}
+
 
 </div>
-
-
-
 
 
 

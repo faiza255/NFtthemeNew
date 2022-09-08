@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images:{
+loader:"akamai",
+path:"",
+  },
   swcMinify: true,
   eslint: {
     // Warning: This allows production builds to successfully complete even if

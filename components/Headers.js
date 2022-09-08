@@ -36,7 +36,7 @@ ease:easing
     transition={{duration:0.3,delay: 0 * 0.2}}
     >
     
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden mb-0'>
 <section className={styles.headerContainer}>
   <div className={styles.headerchild}>
 

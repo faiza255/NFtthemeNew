@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import cardsUser from './CardsUsers'
-import Placebidmodal from './placebidmodal'
+import CardsUser from './Cards_api/CardsUsers.js'
+import Placebidmodal from './Modals/placebidmodal.js'
 import Aos from 'aos'
 import "aos/dist/aos.css"
 
@@ -24,7 +24,7 @@ Aos.init({duration:500})
 <div className="myflex flex justify-center" data-aos="fade-right">
 
  
-{cardsUser.map((e)=>{
+{CardsUser.map((e)=>{
        return (
          <>
         <div className="mycolumn mb-10">

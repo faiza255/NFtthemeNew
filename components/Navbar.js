@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-scroll";
-// import Image from "next/image";
-
-import { animate, motion } from 'framer-motion'
+import Image from "next/image";
+import {motion } from 'framer-motion'
 import styles from '../styles/Home.module.css'
-import WalletModal from './walletModal.js'
-// import Logo from "../public/streamlineLogo.png";
-
+import WalletModal from './Modals/WalletModal.js'
 function Navbar() { 
 	const [isOpen, setIsOpen] = useState(false);
   const [navbar,setNavbar] = useState(false)
@@ -44,13 +41,20 @@ return (
 						<div className="flex items-center  mx-20  justify-between w-full">
 							<div className="flex justify-center items-center flex-shrink-0 ">
 								<h1 className=" font-bold text-xl cursor-pointer">
-	<img src="/logo.png" alt="" width={"200px"}/>
+	{/* <img src="/logo.png" alt="" width={"200px"}/> */}
+	<Image
+      src="/logo.png"
+      alt="Picture of the author"
+      width={200}
+      height={200}
+    />
+
 								</h1>
 							</div>
 							<div className="hidden md:block">
 								<div className="ml-10 flex items-baseline space-x-4 hover:transition-all">
 									<Link
-										activeclassName="Home"
+										activeclassname="Home"
 										to="about"
 										smooth={true}
 										offset={50}
@@ -60,7 +64,7 @@ return (
 										Home
 									</Link>
 									<Link
-										activeclassName="about"
+										activeclassname="about"
 										to="about"
 										smooth={true}
 										offset={50}
@@ -70,7 +74,7 @@ return (
 	Explore
 									</Link>
 									<Link
-										activeclassName="work"
+										activeclassname="work"
 										to="work"
 										smooth={true}
 										offset={50}
@@ -81,7 +85,7 @@ return (
 									</Link>
 
 									<Link
-										activeclassName="Services"
+										activeclassname="Services"
 										to="work"
 										smooth={true}
 										offset={50}
@@ -92,7 +96,7 @@ return (
 									</Link>
 
 									<Link
-										activeclassName="contact"
+										activeclassname="contact"
 										to="contact"
 										smooth={true}
 										offset={50}
@@ -107,12 +111,22 @@ return (
 						</div>
             <div className="hidden relative md:block m-10">
       <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none mr-5 pr-5">
-      <img src="/search.png" alt="" width={"20px"}/>
+   <Image
+      src="/search.png"
+      alt="Picture of the author"
+      width={20}
+      height={20}
+    />
         <span className="sr-only">Search icon</span>
       </div>
      <input type="text" placeholder="Search here..." className={styles.input}/>
     </div>
-    <button type="button"  className={styles.wltbtn} onClick={()=> setOpenModal(true)}><img src="/wallet2.png" alt="" width={"30px"}/>Wallet</button>
+    <button type="button"  className={styles.wltbtn} onClick={()=> setOpenModal(true)}><Image
+      src="/wallet2.png"
+      alt="Picture of the author"
+      width={30}
+      height={30}
+    />     Wallet</button>
 	 <WalletModal open={openModal} onClose={()=> setOpenModal(false)}/>
 	
 						<div className="mr-10 flex md:hidden ">
@@ -184,7 +198,7 @@ return (
 							>
 								<Link
 									href="/home"
-									activeclassName="home"
+									activeclassname="home"
 									to="home"
 									smooth={true}
 									offset={50}
@@ -195,7 +209,7 @@ return (
 								</Link>
 								<Link
 									href="/about"
-									activeclassName="about"
+									activeclassname="about"
 									to="about"
 									smooth={true}
 									offset={50}
@@ -207,7 +221,7 @@ return (
 
 								<Link
 									href="/work"
-									activeclassName="work"
+									activeclassname="work"
 									to="work"
 									smooth={true}
 									offset={50}
@@ -218,7 +232,7 @@ return (
 								</Link>
 								<Link
 									href="/services"
-									activeclassName="services"
+									activeclassname="services"
 									to="services"
 									smooth={true}
 									offset={50}
@@ -230,7 +244,7 @@ return (
 
 								<Link
 									href="/contact"
-									activeclassName="work"
+									activeclassname="work"
 									to="work"
 									smooth={true}
 									offset={50}
